@@ -6,6 +6,11 @@
 package instanttelegram.entity;
 
 import java.util.Date;
+/**
+ * Account.java
+ * 
+ * Created on March 27, 2021, 20.00 PM 
+ */
 
 /**
  *
