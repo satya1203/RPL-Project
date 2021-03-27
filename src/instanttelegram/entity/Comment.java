@@ -16,7 +16,7 @@ public class Comment {
     private Date commentTime;
     private String comment;
 
-    public Comment(User author, Date commentTime, String comment) {
+    public Comment(User _author, Date _commentTime, String _comment) {
         this.author = author;
         this.commentTime = commentTime;
         this.comment = comment;
