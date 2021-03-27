@@ -17,33 +17,33 @@ public class Comment {
     private String comment;
 
     public Comment(User _author, Date _commentTime, String _comment) {
-        this.author = author;
-        this.commentTime = commentTime;
-        this.comment = comment;
+        this.author = _author;
+        this.commentTime = _commentTime;
+        this.comment = _comment;
     }
 
     public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(User author) {
-        this.author = author;
+    public void setAuthor(User _author) {
+        this.author = _author;
     }
 
     public Date getCommentTime() {
         return commentTime;
     }
 
-    public void setCommentTime(Date commentTime) {
-        this.commentTime = commentTime;
+    public void setCommentTime(Date _commentTime) {
+        this.commentTime = _commentTime;
     }
 
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setComment(String _comment) {
+        this.comment = _comment;
     }
     
     
