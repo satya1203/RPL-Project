@@ -33,7 +33,7 @@ public class User extends Account{
     public User(String _profilePic, String _biography, String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum) {
         super(_fullname, _username, _email, _password, _gender, _phoneNum);
         this.profilePic = _profilePic;
-        this.biography =_ biography;
+        this.biography = _biography;
     }
 
     public String getProfilePic() {
@@ -81,11 +81,11 @@ public class User extends Account{
 
     public boolean register(String _fullname,String _username, String _email, String _password, String _gender, String _phoneNum){
         User user = new User();
-        user.setFullname(______fullname);
-        user.setUsername(_____username);
-        user.setEmail(____email);
-        user.setPassword(___password);
-        user.setGender(__gender);
+        user.setFullname(_fullname);
+        user.setUsername(_username);
+        user.setEmail(_email);
+        user.setPassword(_password);
+        user.setGender(_gender);
         user.setPhoneNum(_phoneNum);
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();                
@@ -113,7 +113,7 @@ public class User extends Account{
         //ArrayList<User> listUser = Controller.getAllUser();
         //Mengecek apakah user sudah terdaftar
         for(int i=0;i<user.getListUser().size();i++){
-            if(username.equals(user.getListUser().get(i).getUsername()) && password.equals(user.getListUser().get(i).getPassword())){
+            if(_username.equals(listUser.get(i).getUsername()) && _password.equals(listUser.get(i).getPassword())){
                 return true;
             }    
         }
@@ -141,13 +141,13 @@ public class User extends Account{
     };
     
     public void editUser(String _profilePic, String _biography, String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum){
-        String tempUsername = __username;
+        String tempUsername = _username;
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();
         
         //mengecek apakah ada kredensial yang sama dengan user yang sudah ada
         for(int i=0; i<user.getListUser().size();i++){
-            if(username.equals(user.getListUser().get(i).getUsername()) && !(username.equals(tempUsername))){
+            if(_username.equals(user.getListUser().get(i).getUsername()) && !(_username.equals(tempUsername))){
                 System.out.println("Sudah ada yang memakai username ini");
             }else{
                 isValid = true;
@@ -175,7 +175,7 @@ public class User extends Account{
         
         post.setPostSrc(_postSource);
         post.setCaption(_caption);
-        //post.setAuthor(_user.getUsername());
+        //post.setAuthor(user.getUsername());
         post.setLike(0);
         post.setPostTime(formatter.format(date));
         // memasukkan data postingan ke database
@@ -191,7 +191,7 @@ public class User extends Account{
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         /*
         story.setStorySrc(_storySource);
-        story.setAuthor(__user.getUsername());
+        story.setAuthor(_user.getUsername());
         story.setStoryTime(formatter.format(date));
         * memasukkan data story ke database
         Controller.insertNewStory(story);
@@ -213,9 +213,9 @@ public class User extends Account{
     public void viewPost(User _user){
         //list dari post yang diterbitkan oleh user
         //ArrayList<Post> listOwnPost = Controller.getUserPost(user.getUsername());
-        _user.getListOfPost();
+        user.getListOfPost();
         for(int i=0; /*i<listOwnPost.size()*/ _user.getListOfPost().get(i).size(); i++){
-            System.out.println(_user.getListOfPost().get(i).getAuthor()
+            System.out.println(user.getListOfPost().get(i).getAuthor()
             ,_user.getListOfPost().get(i).getPostSrc()
             ,_user.getListOfPost().get(i).getCaption()
             ,_user.getListOfPost().get(i).getListOfComments()
