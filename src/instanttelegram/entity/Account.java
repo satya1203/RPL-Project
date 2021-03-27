@@ -25,7 +25,7 @@ public class Account {
     public Account() {
     }
 
-    public Account(String fullname, String username, String email, String password, String gender, String phoneNum) {
+    public Account(String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum) {
         this.fullname = fullname;
         this.username = username;
         this.email = email;
