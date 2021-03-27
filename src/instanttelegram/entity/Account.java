@@ -26,60 +26,60 @@ public class Account {
     }
 
     public Account(String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum) {
-        this.fullname = fullname;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.gender = gender;
-        this.phoneNum = phoneNum;
+        this.fullname = _fullname;
+        this.username = _username;
+        this.email = _email;
+        this.password = _password;
+        this.gender = _gender;
+        this.phoneNum = _phoneNum;
     }
 
     public String getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
+    public void setPhoneNum(String _phoneNum) {
+        this.phoneNum = _phoneNum;
     }
 
     public String getFullname() {
         return fullname;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullname(String _fullname) {
+        this.fullname = _fullname;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String _username) {
+        this.username = _username;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String _email) {
+        this.email = _email;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String _password) {
+        this.password = _password;
     }
 
     public String getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setGender(String _gender) {
+        this.gender = _gender;
     }
     
     
