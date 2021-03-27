@@ -30,63 +30,63 @@ public class User extends Account{
         
     }
 
-    public User(String profilePic, String biography, String fullname, String username, String email, String password, String gender, String phoneNum) {
-        super(fullname, username, email, password, gender, phoneNum);
-        this.profilePic = profilePic;
-        this.biography = biography;
+    public User(String _profilePic, String _biography, String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum) {
+        super(_fullname, _username, _email, _password, _gender, _phoneNum);
+        this.profilePic = _profilePic;
+        this.biography =_ biography;
     }
 
     public String getProfilePic() {
         return profilePic;
     }
 
-    public void setProfilePic(String profilePic) {
-        this.profilePic = profilePic;
+    public void setProfilePic(String _profilePic) {
+        this.profilePic = _profilePic;
     }
 
     public String getBiography() {
         return biography;
     }
 
-    public void setBiography(String biography) {
-        this.biography = biography;
+    public void setBiography(String _biography) {
+        this.biography = _biography;
     }
 
     public ArrayList<User> getListUser() {
         return listUser;
     }
 
-    public void setListUser(ArrayList<User> listUser) {
-        this.listUser = listUser;
+    public void setListUser(ArrayList<User> _listUser) {
+        this.listUser = _listUser;
     }
     
-    public void addUser(User user){
-        listUser.add(user);
+    public void addUser(User _user){
+        listUser.add(_user);
     }
     public ArrayList<Post> getListOfPost() {
         return listOfPost;
     }
 
-    public void setListOfPost(ArrayList<Post> listOfPost) {
-        this.listOfPost = listOfPost;
+    public void setListOfPost(ArrayList<Post> _listOfPost) {
+        this.listOfPost = _listOfPost;
     }
     
     public ArrayList<Post> getListOfSavedPost() {
         return listOfSavedPost;
     }
 
-    public void setListOfSavedPost(ArrayList<Post> listOfSavedPost) {
-        this.listOfSavedPost = listOfSavedPost;
+    public void setListOfSavedPost(ArrayList<Post> _listOfSavedPost) {
+        this.listOfSavedPost = _listOfSavedPost;
     }
 
-    public boolean register(String fullname,String username, String email, String password, String gender, String phoneNum){
+    public boolean register(String _fullname,String _username, String _email, String _password, String _gender, String _phoneNum){
         User user = new User();
-        user.setFullname(fullname);
-        user.setUsername(username);
-        user.setEmail(email);
-        user.setPassword(password);
-        user.setGender(gender);
-        user.setPhoneNum(phoneNum);
+        user.setFullname(______fullname);
+        user.setUsername(_____username);
+        user.setEmail(____email);
+        user.setPassword(___password);
+        user.setGender(__gender);
+        user.setPhoneNum(_phoneNum);
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();                
         //mengecek apakah ada kredensial yang sama dengan user yang sudah ada
@@ -109,24 +109,24 @@ public class User extends Account{
         return false;
     };
     
-    public boolean login(String username, String password){
+    public boolean login(String _username, String _password){
         //ArrayList<User> listUser = Controller.getAllUser();
         //Mengecek apakah user sudah terdaftar
         for(int i=0;i<user.getListUser().size();i++){
-            if(username.equals(listUser.get(i).getUsername()) && password.equals(listUser.get(i).getPassword())){
+            if(username.equals(user.getListUser().get(i).getUsername()) && password.equals(user.getListUser().get(i).getPassword())){
                 return true;
             }    
         }
         return false;
     };
     
-    public boolean recoverAccount(String username){
+    public boolean recoverAccount(String _username){
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();
         //Mengecek dari database apakah user sudah terdaftar
         
         for(int i=0;i<user.getListUser().size();i++){
-            if(username.equals(user.getListUser().get(i).getUsername())){
+            if(_username.equals(user.getListUser().get(i).getUsername())){
                 isValid = true;
             }    
         }
@@ -140,8 +140,8 @@ public class User extends Account{
         return false;
     };
     
-    public void editUser(String profilePic, String biography, String fullname, String username, String email, String password, String gender, String phoneNum){
-        String tempUsername = username;
+    public void editUser(String _profilePic, String _biography, String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum){
+        String tempUsername = __username;
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();
         
@@ -167,15 +167,15 @@ public class User extends Account{
         return;
     }
     
-    public void cratePost(String postSource, String caption, User user){
+    public void cratePost(String _postSource, String _caption, User _user){
         Post post = new Post;
         
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         
-        post.setPostSrc(postSource);
-        post.setCaption(caption);
-        //post.setAuthor(user.getUsername());
+        post.setPostSrc(_postSource);
+        post.setCaption(_caption);
+        //post.setAuthor(_user.getUsername());
         post.setLike(0);
         post.setPostTime(formatter.format(date));
         // memasukkan data postingan ke database
@@ -185,13 +185,13 @@ public class User extends Account{
         
     }
     
-    public void createStory(String storySource, User user){
+    public void createStory(String _storySource, User _user){
         //Story story = new Story();
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         /*
-        story.setStorySrc(storySource);
-        story.setAuthor(user.getUsername());
+        story.setStorySrc(_storySource);
+        story.setAuthor(__user.getUsername());
         story.setStoryTime(formatter.format(date));
         * memasukkan data story ke database
         Controller.insertNewStory(story);
@@ -200,9 +200,9 @@ public class User extends Account{
         */
     }
     
-    public void viewDirectMessage(String usernameFriend, String username){
+    public void viewDirectMessage(String _usernameFriend, String _username){
         //list pesan/DM dari teman yang tersimpan di database
-        //ArrayList<friend> listFriendMessage = Controller.getFriendMessage(usernameFriend, username);
+        //ArrayList<friend> listFriendMessage = Controller.getFriendMessage(_usernameFriend, _username);
         /*
         for(int i=0; i<listFriendMessage.size(); i++){
             System.out.println(listMessagedFriend.get(i).getMessage());
@@ -210,16 +210,16 @@ public class User extends Account{
         */
     }
     
-    public void viewPost(User user){
+    public void viewPost(User _user){
         //list dari post yang diterbitkan oleh user
         //ArrayList<Post> listOwnPost = Controller.getUserPost(user.getUsername());
-        user.getListOfPost();
-        for(int i=0; /*i<listOwnPost.size()*/ user.getListOfPost().get(i).size(); i++){
-            System.out.println(user.getListOfPost().get(i).getAuthor()
-            ,user.getListOfPost().get(i).getPostSrc()
-            ,user.getListOfPost().get(i).getCaption()
-            ,user.getListOfPost().get(i).getListOfComments()
-            ,user.getListOfPost().get(i).getPostTime());
+        _user.getListOfPost();
+        for(int i=0; /*i<listOwnPost.size()*/ _user.getListOfPost().get(i).size(); i++){
+            System.out.println(_user.getListOfPost().get(i).getAuthor()
+            ,_user.getListOfPost().get(i).getPostSrc()
+            ,_user.getListOfPost().get(i).getCaption()
+            ,_user.getListOfPost().get(i).getListOfComments()
+            ,_user.getListOfPost().get(i).getPostTime());
         }
           
     }
