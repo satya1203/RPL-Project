@@ -17,12 +17,12 @@ public class Shop {
     private User wishBy;
     private ArrayList<ShopItem> listOfWish = new ArrayList<>();
     
-    private void addToWishlist(ShopItem item) {
-        listOfWish.add(item);
+    private void addToWishlist(ShopItem _item) {
+        listOfWish.add(_item);
     }
     
-    private boolean removeFromWishlist(ShopItem item) {
-        boolean isRemoved = listOfWish.remove(item);
+    private boolean removeFromWishlist(ShopItem _item) {
+        boolean isRemoved = listOfWish.remove(_item);
         return isRemoved;
     }
 }
