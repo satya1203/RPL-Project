@@ -1,14 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Shop.java
+ * 
+ * Created on March 27 2021, 15:30 PM
  */
 package instanttelegram.entity;
 
 import java.util.ArrayList;
 
 /**
- *
+ * Kelas Shop Berfungsi untuk menyimpan data toko yang di 
+ * wish oleh pengguna.
+ * 
  * @author luckysetiawan
  */
 public class Shop {

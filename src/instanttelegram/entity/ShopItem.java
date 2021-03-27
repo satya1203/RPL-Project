@@ -1,12 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * ShopItem.java
+ * 
+ * Created on March 27 2021, 15:00 PM
  */
 package instanttelegram.entity;
 
 /**
- *
+ * Kelas ShopItem Berfungsi untuk menyimpan data barang yang dijual
+ * oleh penjual.
+ * 
  * @author luckysetiawan
  */
 public class ShopItem {
