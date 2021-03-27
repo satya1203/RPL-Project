@@ -26,7 +26,7 @@ public class User extends Account{
     private ArrayList<Post> listOfPost = new ArrayList<>();
     private ArrayList<Post> listOfSavedPost = new ArrayList<>();
 
-    public User(){ 
+    public User() { 
         
     }
 
@@ -79,7 +79,7 @@ public class User extends Account{
         this.listOfSavedPost = _listOfSavedPost;
     }
 
-    public boolean register(String _fullname,String _username, String _email, String _password, String _gender, String _phoneNum){
+    public boolean register(String _fullname,String _username, String _email, String _password, String _gender, String _phoneNum) {
         User user = new User();
         user.setFullname(_fullname);
         user.setUsername(_username);
@@ -90,17 +90,17 @@ public class User extends Account{
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();                
         //mengecek apakah ada kredensial yang sama dengan user yang sudah ada
-        for(int i=0; i<user.getListUser().size();i++){
-            if(username.equals(user.getListUser().get(i).getUsername())){
+        for(int i = 0; i < user.getListUser().size(); i++) {
+            if(username.equals(user.getListUser().get(i).getUsername())) {
                 System.out.println("Maaf username sudah terdaftar harap diubah");
-            }else if(email.equals(user.getListUser().get(i).getEmail())){
+            } else if(email.equals(user.getListUser().get(i).getEmail())) {
                 System.out.println("Maaf email sudah terdaftar harap diubah");
-            }else{
+            } else {
                 isValid = true;
             }
         }
 
-        if(isValid == true){
+        if(isValid == true) {
             //apabila berhasil akun akan masuk ke database
             //Controller.insertNewUser(user);
             user.addUser(user); 
@@ -109,28 +109,28 @@ public class User extends Account{
         return false;
     };
     
-    public boolean login(String _username, String _password){
+    public boolean login(String _username, String _password) {
         //ArrayList<User> listUser = Controller.getAllUser();
         //Mengecek apakah user sudah terdaftar
-        for(int i=0;i<user.getListUser().size();i++){
-            if(_username.equals(listUser.get(i).getUsername()) && _password.equals(listUser.get(i).getPassword())){
+        for(int i = 0; i < user.getListUser().size(); i++) {
+            if(_username.equals(user.getListUser().get(i).getUsername()) && _password.equals(user.getListUser().get(i).getPassword())){
                 return true;
             }    
         }
         return false;
     };
     
-    public boolean recoverAccount(String _username){
+    public boolean recoverAccount(String _username) {
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();
         //Mengecek dari database apakah user sudah terdaftar
         
-        for(int i=0;i<user.getListUser().size();i++){
+        for(int i = 0; i < user.getListUser().size(); i++) {
             if(_username.equals(user.getListUser().get(i).getUsername())){
                 isValid = true;
             }    
         }
-        if(isValid == true){
+        if(isValid == true) {
             Scanner scan  = new Scanner(System.in);
             String newPass = scan.nextLine();
             //update password milik username tersebut di database
@@ -140,16 +140,16 @@ public class User extends Account{
         return false;
     };
     
-    public void editUser(String _profilePic, String _biography, String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum){
+    public void editUser(String _profilePic, String _biography, String _fullname, String _username, String _email, String _password, String _gender, String _phoneNum) {
         String tempUsername = _username;
         boolean isValid = false;
         //ArrayList<User> listUser = Controller.getAllUser();
         
         //mengecek apakah ada kredensial yang sama dengan user yang sudah ada
-        for(int i=0; i<user.getListUser().size();i++){
-            if(_username.equals(user.getListUser().get(i).getUsername()) && !(_username.equals(tempUsername))){
+        for(int i = 0; i < user.getListUser().size(); i++) {
+            if(_username.equals(user.getListUser().get(i).getUsername()) && !(_username.equals(tempUsername))) {
                 System.out.println("Sudah ada yang memakai username ini");
-            }else{
+            } else {
                 isValid = true;
             }
         }
@@ -167,7 +167,7 @@ public class User extends Account{
         return;
     }
     
-    public void cratePost(String _postSource, String _caption, User _user){
+    public void cratePost(String _postSource, String _caption, User _user) {
         Post post = new Post;
         
         Date date = new Date();
@@ -185,7 +185,7 @@ public class User extends Account{
         
     }
     
-    public void createStory(String _storySource, User _user){
+    public void createStory(String _storySource, User _user) {
         //Story story = new Story();
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
@@ -200,7 +200,7 @@ public class User extends Account{
         */
     }
     
-    public void viewDirectMessage(String _usernameFriend, String _username){
+    public void viewDirectMessage(String _usernameFriend, String _username) {
         //list pesan/DM dari teman yang tersimpan di database
         //ArrayList<friend> listFriendMessage = Controller.getFriendMessage(_usernameFriend, _username);
         /*
@@ -210,11 +210,11 @@ public class User extends Account{
         */
     }
     
-    public void viewPost(User _user){
+    public void viewPost(User _user) {
         //list dari post yang diterbitkan oleh user
         //ArrayList<Post> listOwnPost = Controller.getUserPost(user.getUsername());
         user.getListOfPost();
-        for(int i=0; /*i<listOwnPost.size()*/ _user.getListOfPost().get(i).size(); i++){
+        for(int i = 0; /*i<listOwnPost.size()*/ _user.getListOfPost().get(i).size(); i++ {
             System.out.println(user.getListOfPost().get(i).getAuthor()
             ,_user.getListOfPost().get(i).getPostSrc()
             ,_user.getListOfPost().get(i).getCaption()
@@ -224,7 +224,7 @@ public class User extends Account{
           
     }
     
-    public void viewShop(){
+    public void viewShop() {
         //list dari barang yang dijual yang tersimpan pada database
         //ArrayList<Shop> listOfItems = Controller.getItems();
         /*

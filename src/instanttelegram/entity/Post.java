@@ -31,28 +31,28 @@ public class Post {
     public Post() {
     }
 
-    public Post(int idPost,String caption, int likes, String postSrc, Date postTime) {
-        this.idPost = idPost;
-        this.caption = caption;
-        this.likes = likes;
-        this.postTime = postTime;
-        this.postSrc = postSrc;
+    public Post(int idPost,String _caption, int _likes, String _postSrc, Date _postTime) {
+        this.idPost = _idPost;
+        this.caption = _caption;
+        this.likes = _likes;
+        this.postTime = _postTime;
+        this.postSrc = _postSrc;
     }
 
     public String getCaption() {
         return caption;
     }
 
-    public void setCaption(String caption) {
-        this.caption = caption;
+    public void setCaption(String _caption) {
+        this.caption = _caption;
     }
 
     public int getLikes() {
         return likes;
     }
 
-    public int setLikes(int likes) {
-        this.likes = likes;
+    public int setLikes(int _likes) {
+        this.likes = _likes;
         return 0;
     }
 
@@ -61,8 +61,8 @@ public class Post {
         return postTime;
     }
 
-    public Date setPostTime(Date postTime) {
-        this.postTime = postTime;
+    public Date setPostTime(Date _postTime) {
+        this.postTime = _postTime;
         return null;
     }
 
@@ -70,31 +70,31 @@ public class Post {
        return listOfComment;
     }
 
-    public void setListComment(ArrayList<Comment> listOfComment) {
-        this.listOfComment = listOfComment;
+    public void setListComment(ArrayList<Comment> _listOfComment) {
+        this.listOfComment = _listOfComment;
     }
 
     public ArrayList<User> getAuthor() {
         return User;
     }
 
-    public void setAuthor(ArrayList<User> Author) {
-        this.Author = Author;
+    public void setAuthor(ArrayList<User> _Author) {
+        this.Author = _Author;
     }
 
     public String getPostSrc() {
        return postSrc;
     }
 
-    public void setPostSrc(String postSrc) {
-        this.postSrc = postSrc;
+    public void setPostSrc(String _postSrc) {
+        this.postSrc = _postSrc;
     }
         public int getIdPost() {
         return idPost;
     }
 
-    public void setIdPost(int idPost) {
-        this.idPost = idPost;
+    public void setIdPost(int _idPost) {
+        this.idPost = _idPost;
     }
     
 //    @Override
