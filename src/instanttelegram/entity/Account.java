@@ -5,7 +5,7 @@
  */
 package instanttelegram.entity;
 /**
- * User.java
+ * Account.java
  * 
  * Created on March 27, 2021, 15:10 PM 
  */
