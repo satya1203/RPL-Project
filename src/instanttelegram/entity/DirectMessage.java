@@ -18,8 +18,9 @@ public class DirectMessage {
     public void setMessage(String message){
             this.message=message;
     }
-    sendDirectMessage(User username,String message){
-            username.dm.setMessage(message);		//dm = object dalam user
-            username.dm.setReceiver(username);
+    
+    private void sendDirectMessage(User username,String message){
+            //username.dm.setMessage(message);		//dm = object dalam user
+            //username.dm.setReceiver(username);
     }
 }
