@@ -9,7 +9,13 @@ import java.util.ArrayList;
 import java.util.Date;
 //import Controller.ControllerPost;
 /**
- *
+ * Post.java
+ * 
+ * Created on March 27, 2021, 16:17 PM 
+ */
+
+/**
+ * Kelas Post yang berisi atribut post dan fungsi/prosedur yang diperlukan post. 
  * @author Andreas
  */
 public class Post {
@@ -18,8 +24,8 @@ public class Post {
     private Date postTime;
     private int likes;
     private String postSrc;
-//   private ArrayList<Comment> listOfComment = new ArrayList<>();
-//   private ArrayList<User> Author = new ArrayList<>();
+    private ArrayList<Comment> listOfComment = new ArrayList<>();
+    private ArrayList<User> Author = new ArrayList<>();
 
 
     public Post() {
@@ -60,21 +66,21 @@ public class Post {
         return null;
     }
 
-//  public ArrayList<Comment> getListOfComment() {
-//     return listOfComment;
-//  }
+    public ArrayList<Comment> getListOfComment() {
+       return listOfComment;
+    }
 
-//    public void setListComment(ArrayList<Comment> listOfComment) {
-//        this.listOfComment = listOfComment;
-//    }
+    public void setListComment(ArrayList<Comment> listOfComment) {
+        this.listOfComment = listOfComment;
+    }
 
-//    public ArrayList<User> getAuthor() {
-//        return User;
-//    }
+    public ArrayList<User> getAuthor() {
+        return User;
+    }
 
-//    public void setAuthor(ArrayList<User> Author) {
-//        this.Author = Author;
-//    }
+    public void setAuthor(ArrayList<User> Author) {
+        this.Author = Author;
+    }
 
     public String getPostSrc() {
        return postSrc;
