@@ -6,6 +6,11 @@
 package instanttelegram.entity;
 
 import java.util.Date;
+/**
+ * Story.java
+ * 
+ * Created on March 27, 2021, 20:00 PM 
+ */
 
 /**
  *
@@ -16,34 +21,34 @@ public class Story {
     private User author;
     private String storySrc;
 
-    public Story(Date storyTime, User author, String storySrc) {
-        this.storyTime = storyTime;
-        this.author = author;
-        this.storySrc = storySrc;
+    public Story(Date _storyTime, User _author, String _storySrc) {
+        this.storyTime = _storyTime;
+        this.author = _author;
+        this.storySrc = _storySrc;
     }
 
     public Date getStoryTime() {
         return storyTime;
     }
 
-    public void setStoryTime(Date storyTime) {
-        this.storyTime = storyTime;
+    public void setStoryTime(Date _storyTime) {
+        this.storyTime = _storyTime;
     }
 
     public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(User author) {
-        this.author = author;
+    public void setAuthor(User _author) {
+        this.author = _author;
     }
 
     public String getStorySrc() {
         return storySrc;
     }
 
-    public void setStorySrc(String storySrc) {
-        this.storySrc = storySrc;
+    public void setStorySrc(String _storySrc) {
+        this.storySrc = _storySrc;
     }
     
     
