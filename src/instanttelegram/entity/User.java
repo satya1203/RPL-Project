@@ -23,8 +23,8 @@ public class User extends Account{
     private String profilePic;
     private String biography;
     private ArrayList<User> listUser = new ArrayList<>();
-    //private ArrayList<Post> listOfPost = new ArrayList<>();
-    //private ArrayList<Post> listOfSavedPost = new ArrayList<>();
+    private ArrayList<Post> listOfPost = new ArrayList<>();
+    private ArrayList<Post> listOfSavedPost = new ArrayList<>();
 
     public User(){ 
         
@@ -63,21 +63,21 @@ public class User extends Account{
     public void addUser(User user){
         listUser.add(user);
     }
-    /*public ArrayList<Post> getListOfPost() {
-    //    return listOfPost;
-    }*/
+    public ArrayList<Post> getListOfPost() {
+        return listOfPost;
+    }
 
-    /*public void setListOfPost(ArrayList<Post> listOfPost) {
+    public void setListOfPost(ArrayList<Post> listOfPost) {
         this.listOfPost = listOfPost;
-    }*/
+    }
     
-    /*public ArrayList<Post> getListOfSavedPost() {
-    //    return listOfSavedPost;
-    }*/
+    public ArrayList<Post> getListOfSavedPost() {
+        return listOfSavedPost;
+    }
 
-    /*public void setListOfSavedPost(ArrayList<Post> listOfSavedPost) {
+    public void setListOfSavedPost(ArrayList<Post> listOfSavedPost) {
         this.listOfSavedPost = listOfSavedPost;
-    }*/
+    }
 
     public boolean register(String fullname,String username, String email, String password, String gender, String phoneNum){
         User user = new User();
@@ -168,20 +168,21 @@ public class User extends Account{
     }
     
     public void cratePost(String postSource, String caption, User user){
-        //Post post = new Post;
+        Post post = new Post;
+        
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        /*
+        
         post.setPostSrc(postSource);
         post.setCaption(caption);
-        post.setAuthor(user.getUsername());
+        //post.setAuthor(user.getUsername());
         post.setLike(0);
         post.setPostTime(formatter.format(date));
-        * memasukkan data postingan ke database
-        Controller.insertNewPost(post);
-        * data post masuk ke list
-        post.addPost(post)
-        */
+        // memasukkan data postingan ke database
+        //Controller.insertNewPost(post);
+        // data post masuk ke list
+        //post.addPost(post)
+        
     }
     
     public void createStory(String storySource, User user){
@@ -212,15 +213,15 @@ public class User extends Account{
     public void viewPost(User user){
         //list dari post yang diterbitkan oleh user
         //ArrayList<Post> listOwnPost = Controller.getUserPost(user.getUsername());
-        /*
-        for(int i=0; i<listOwnPost.size(); i++){
-            System.out.println(listOwnPost.get(i).getAuthor()
-            ,listOwnPost.get(i).getPostSrc()
-            ,listOwnPost.get(i).getCaption()
-            ,listOwnPost.get(i).getListOfComments()
-            ,listOwnPost.get(i).getPostTime());
+        user.getListOfPost();
+        for(int i=0; /*i<listOwnPost.size()*/ user.getListOfPost().get(i).size(); i++){
+            System.out.println(user.getListOfPost().get(i).getAuthor()
+            ,user.getListOfPost().get(i).getPostSrc()
+            ,user.getListOfPost().get(i).getCaption()
+            ,user.getListOfPost().get(i).getListOfComments()
+            ,user.getListOfPost().get(i).getPostTime());
         }
-        */   
+          
     }
     
     public void viewShop(){
